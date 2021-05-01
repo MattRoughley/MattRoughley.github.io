@@ -31,6 +31,7 @@ header{
   z-index: 999;
   margin-top: 0;
   padding-top: 0;
+  background-color: var(--background);
 }
 
 .logo{
@@ -142,7 +143,7 @@ box-sizing: border-box;
   
     header {
       display: grid;
-      grid-template-columns:  1fr auto minmax(600px, 3fr) 1fr;
+      grid-template-columns:  1fr auto minmax(600px, 3fr) 0.2fr ;
     }
   
   .logo{
@@ -203,24 +204,32 @@ HERO SECTION
 ============
 */
 
-.hero {
-  opacity: 0.6;
-  background-color: #9aa8a5;
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 6em;
-  border: 1px solid black;
+main{
+  display:flex;
+  width: auto;
+  height: 960px;
+  padding-top: 205px;
+  background: #FFFFFF;
+}
+
+.about{
+  flex: 1;
+  padding:1rem;
+  font-size: 3em;
+  justify-content: center;
+  spa
+}
+
+.hero-img{
+    height: 500px;
+    width: 50%;
+    flex: 1;
+    padding: 1rem;
+  }
 
 .tagline{ 
  text-align: left;
  padding-left: 2em;
  font-size: 1.5em;
  width: 50%;
-}
-
-.welcome-section{
-  margin-top:50px;
-  border: solid red 1px;
 }
