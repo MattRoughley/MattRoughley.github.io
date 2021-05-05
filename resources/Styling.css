@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab&display=swap');
+:root {
+  --background: rgb(255, 255, 255);
+  --headings: 'Roboto Slab', serif;
+  --body: 'Roboto Mono', monospace;
 
-:root{
-  --background: rgb(180, 177, 177);
-  --headings: font-family: 'Roboto Slab', serif;
 }
 
 html, *, *::before, *::after{
@@ -24,6 +25,7 @@ body{
 */
 
 header{
+  background: var(--background);
   font-family: var(--headings);
   text-align: center;
   position: fixed;
@@ -31,14 +33,12 @@ header{
   z-index: 999;
   margin-top: 0;
   padding-top: 0;
-  background-color: var(--background);
+
 }
 
 .logo{
 box-sizing: border-box;
- height: 8em;
-
-
+ height: 7em;
 }
 
 /*
@@ -205,31 +205,84 @@ HERO SECTION
 */
 
 main{
-  display:flex;
   width: auto;
-  height: 960px;
-  padding-top: 205px;
+  height: 600px;
+  padding-top: 150px;
   background: #FFFFFF;
 }
 
 .about{
-  flex: 1;
-  padding:1rem;
-  font-size: 3em;
   justify-content: center;
-  spa
+  text-align: center;
+  border: solid 1px red;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
-.hero-img{
-    height: 500px;
-    width: 50%;
-    flex: 1;
-    padding: 1rem;
-  }
+.about .name{
+  font-family: var(--headings);
+  font-size: 3em;
+  margin-bottom: 20px;
+}
 
-.tagline{ 
- text-align: left;
- padding-left: 2em;
- font-size: 1.5em;
- width: 50%;
+.about .dev{
+  font-family: var(--body);
+  font-size: 1.2em;
+}
+.tagline{   
+font-family: var(--body);
+font-size: 1em;
+padding-top: 5em;
+padding-bottom: 2em;
+margin-left: 150px;
+margin-right: 150px;
+}
+
+
+/*
+==============
+ ABOUT BUTTON
+==============
+*/
+.git-but{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #000000;
+    margin:0 0.3em 0.3em 0;
+
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    color:#000000;
+    text-align:center;
+    transition: all 0.2s;
+    }
+    .git-but:hover{
+    color:#ffffff;
+    background-color:#3a3838;
+    }
+
+    @media all and (max-width:30em){
+    .git-but{
+    display:block;
+    margin:0.4em auto;
+  }
+}
+
+/*
+==============
+SKILLS PROFILE
+==============
+*/
+
+.skills-profile{
+  width: auto;
+  height: fit-content;
+  text-align: center;
+}
+
+.skills-logo{
+  height: 50px;
+  width: 50px;
 }
