@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
 :root {
   --background: rgb(255, 255, 255);
-  --headings: 'Roboto Slab', serif;
+  --headings: 'Jomhuria', cursive;
   --body: 'Roboto Mono', monospace;
 
 }
@@ -15,7 +16,6 @@ html, *, *::before, *::after{
 body{
   padding: 0;
   margin: 0;
-  background: rgb(230, 230, 230);
 }
 
 /*
@@ -25,22 +25,35 @@ body{
 */
 
 header{
-  background: var(--background);
+  
   font-family: var(--headings);
   text-align: center;
   position: fixed;
   width: 100%;
   z-index: 999;
-  margin-top: 0;
+  margin-top: 1em;
   padding-top: 0;
+  background: rgb(60, 148, 125);
 
 }
 
-.logo{
-box-sizing: border-box;
- height: 7em;
+.name{
+font-size: 2.8em;
+color: rgb(243, 243, 243);
+text-decoration: none;
+margin-left: 1em;
+
 }
 
+.name:hover {
+  color: rgb(61, 56, 56);
+
+}
+
+
+.name:hover::before{
+  transform: scale(1,1);
+}
 /*
 ====================================
           NAV BAR
@@ -105,6 +118,7 @@ box-sizing: border-box;
     transform-origin: top;
     transform: scale(1,0);
     transition: transform 300ms ease-in-out ;
+  
   }
   
   nav ul{
@@ -121,8 +135,8 @@ box-sizing: border-box;
   
   nav a{
     text-decoration: none;
-    color: rgb(3, 3, 3);
-    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
     text-transform: uppercase;
     opacity: 0;
     transition: opacity 150ms ease-in-out;
@@ -144,11 +158,13 @@ box-sizing: border-box;
     header {
       display: grid;
       grid-template-columns:  1fr auto minmax(600px, 3fr) 0.2fr ;
+      background-color: rgb(60, 148, 125);
     }
+    
   
-  .logo{
+  .name{
     grid-column: 1 / 3;
-    padding-left: 4em;
+    padding-left: 2em;
   }
   
   nav{
@@ -163,6 +179,7 @@ box-sizing: border-box;
   
   nav a {
     opacity: 1;
+    font-size: 2.3em;
   }
   
   nav ul {
@@ -174,19 +191,19 @@ box-sizing: border-box;
   nav li{
     margin-left: 4em;
     margin-bottom: 0;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   nav a:hover {
-    color: grey;
+    color: rgb(61, 56, 56);
   }
   
   nav a::before {
     content: "";
     display: block;
     height: 2px;
-    background: black;
+    background: rgb(255, 255, 255);
     position: absolute;
-    top: -.75em;
+    top: -.35em;
     left: 0;
     right: 0;
     transform: scale(0, 1);
@@ -206,26 +223,42 @@ HERO SECTION
 
 main{
   width: auto;
-  height: 600px;
+  height: 100vh;
   padding-top: 150px;
-  background: #FFFFFF;
+  background: rgb(60, 148, 125);
 }
 
-.about{
-  justify-content: center;
+main:after{
+  background: inherit;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-2.5deg);
+  transform-origin: 100%;
+  z-index: -1;
+}
+
+.welcome-section{
+  justify-content: left;
   text-align: center;
   border: solid 1px red;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 80vh;
+
 }
 
-.about .name{
+.welcome-section .name{
   font-family: var(--headings);
-  font-size: 3em;
+  font-size: 2em;
   margin-bottom: 20px;
 }
 
-.about .dev{
+.welcome-section .name{
   font-family: var(--body);
   font-size: 1.2em;
 }
