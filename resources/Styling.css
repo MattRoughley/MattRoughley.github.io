@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
 :root {
-  --background: rgb(255, 255, 255);
+  --background:#d7cec7;
   --headings: 'Jomhuria', cursive;
   --body: 'Roboto Mono', monospace;
 
@@ -31,9 +31,8 @@ header{
   position: fixed;
   width: 100%;
   z-index: 999;
-  margin-top: 1em;
   padding-top: 0;
-  background: rgb(60, 148, 125);
+  background: var(--background)
 
 }
 
@@ -216,59 +215,45 @@ margin-left: 1em;
   }
   
   /*
-============
+============++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 HERO SECTION
-============
+============++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
 
 main{
   width: auto;
   height: 100vh;
-  padding-top: 150px;
+  padding-top: 100px;
   background: rgb(60, 148, 125);
 }
 
-main:after{
-  background: inherit;
-  bottom: 0;
-  content: '';
-  display: block;
-  height: 50%;
-  left: 0;
-  position: absolute;
-  right: 0;
-  transform: skewY(-2.5deg);
-  transform-origin: 100%;
-  z-index: -1;
-}
 
 .welcome-section{
   justify-content: left;
-  text-align: center;
-  border: solid 1px red;
-  margin-left: 10%;
-  margin-right: 10%;
+  text-align: left;
+  margin-left: 20%;
+  margin-right: 20%;
   height: 80vh;
 
 }
 
-.welcome-section .name{
-  font-family: var(--headings);
+.welcome-section .title{
+  font-family: var(--body);
   font-size: 2em;
   margin-bottom: 20px;
+  padding-top: 2em;
 }
 
-.welcome-section .name{
+.welcome-section .hero-body{
   font-family: var(--body);
   font-size: 1.2em;
 }
-.tagline{   
+.hero-body{   
 font-family: var(--body);
 font-size: 1em;
-padding-top: 5em;
+padding-top: 2em;
 padding-bottom: 2em;
-margin-left: 150px;
-margin-right: 150px;
+
 }
 
 
@@ -309,13 +294,21 @@ SKILLS PROFILE
 ==============
 */
 
-.skills-profile{
+#projects{
+  height: 100vh;
+  background-color: rgb(248, 221, 221);
   width: auto;
-  height: fit-content;
-  text-align: center;
+  padding-top: 100px;
 }
 
-.skills-logo{
-  height: 50px;
-  width: 50px;
+.proj-cont{
+  justify-content: left;
+  text-align: left;
+  margin-left: 20%;
+  margin-right: 20%;
+  height: 80vh;
+}
+
+.proj-cont .project-title{
+  font: var(--body);
 }
